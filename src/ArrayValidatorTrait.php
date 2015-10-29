@@ -11,10 +11,10 @@ trait ArrayValidatorTrait {
 			return $this->container->call([$this, 'validator'], compact('factory'));
 		}
 
-		$data = $this->all();
 		$rules = $this->container->call([$this, 'rules']);
 		$messages = $this->messages();
 		$attributes = $this->attributes();
+		$data = $this->all();
 
 		foreach ($data as $key => $value) {
 
